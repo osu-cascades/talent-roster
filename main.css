@@ -1,0 +1,14 @@
+body{
+    padding-left: 5%;
+}
+h1{
+    color:orange;
+}
+
+.students_main{
+    float:left;
+}
+.business_main{
+    float:left;
+    padding-left: 10%;
+}
