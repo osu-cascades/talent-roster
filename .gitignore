@@ -88,3 +88,8 @@ local_settings.py
 
 .env
 db.sqlite3
+
+bin/
+include/
+pip-selfcheck.json
+pyvenv.cfg
