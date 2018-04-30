@@ -76,3 +76,8 @@ STATICFILES_DIRS = (
 )
 
 django_heroku.settings(locals())
+
+# See https://github.com/heroku/django-heroku/issues/10
+ssl_require = os.environ['DJANGO_ENV'] == 'production'
+locals()['DATABASES']['default'] = dj_database_url.config(
+    conn_max_age=django_heroku.MAX_CONN_AGE, ssl_require=ssl_require)
