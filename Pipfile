@@ -8,6 +8,7 @@ django = "*"
 "psycopg2" = "*"
 gunicorn = "*"
 django-heroku = "*"
+dj-database-url = "*"
 
 [dev-packages]
 

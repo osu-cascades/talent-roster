@@ -1,4 +1,5 @@
 import os
+import dj_database_url
 import django_heroku
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -45,16 +46,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'talent_roster.wsgi.application'
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'talent_roster',
-	'USER': 'postgres',
-	'PASSWORD': 'root',
-	'HOST': 'localhost',
-	'POST': '',
-    }
-}
+DATABASES = { 'default': dj_database_url.config() }
 
 AUTH_PASSWORD_VALIDATORS = [
     {
