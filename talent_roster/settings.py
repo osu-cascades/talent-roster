@@ -1,4 +1,5 @@
 import os
+import django_heroku
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'This will be overwritten in production with a real secret.'
@@ -77,3 +78,5 @@ USE_L10N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
+
+django_heroku.settings(locals())
