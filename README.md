@@ -10,7 +10,7 @@ managed by [venv](https://docs.python.org/3/library/venv.html) and
 [pipenv](https://github.com/pypa/pipenv). After you clone this repository,
 `cd` into the repo root and create the virtual environment:
 
-`python -m venv .`
+`python3 -m venv .`
 
 Next, activate the environment:
 
@@ -36,7 +36,19 @@ Next, configure this Django project by copying _.env.example_ to _.env_.
 This is your environment-specific configuration file. Set `DATABASE_URL` to
 a valid database url appropriate for your local development environment.
 
-TODO database setup, initial migrations, starting server.
+Run the migrations to establish your database schema:
+
+`./manage.py migrate`
+
+Create your Django superuser record:
+
+`./manage.py createsuperuser`
+
+TODO any remaining setup config
+
+Start the server:
+
+`./manage.py runserver`
 
 ## Testing
 
