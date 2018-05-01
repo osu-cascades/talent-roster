@@ -8,6 +8,7 @@ DEBUG = True # Will be overridden in production
 ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
+    'profiles.apps.ProfilesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
