@@ -8,8 +8,10 @@ def index(request):
 
 def list(request):
     profiles = Profile.objects.order_by('last_name')
-    output = ', '.join([p.full_name for p in profiles])
-    return HttpResponse("List of profiles\n" + output)
+    context = {
+        'profiles': profiles
+    }
+    return render(request, 'profiles/list.html', context)
 
 def detail(request, profile_id):
     return HttpResponse("Display profile %s" % profile_id)
