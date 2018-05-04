@@ -4,7 +4,7 @@ from .models import Profile
 
 
 def index(request):
-    return render(request, 'index.html')
+    return render(request, 'profiles/index.html')
 
 def list(request):
     profiles = Profile.objects.order_by('last_name')
