@@ -11,3 +11,7 @@ class Profile(models.Model):
     resume = models.CharField(max_length=250)
     skills = models.CharField(max_length=250)
     website_url = models.CharField(max_length=50)
+
+
+    def full_name(self):
+        return  "%s %s" % (self.first_name, self.last_name)
