@@ -14,3 +14,12 @@ def sign_up(request):
 
 def log_in(reguest):
     return render(reguest, 'login.html')
+
+def account(reguest):
+    return render(reguest, 'account.html')
+
+def business(reguest):
+    return render(reguest, 'business.html')
+
+def profiles(reguest):
+    return render(reguest, 'profiles.html')
