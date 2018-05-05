@@ -8,11 +8,11 @@
 </head>
 <body>
 <h1>Profiles</h1>
-<p><a href="{% url 'index' %}">Home</a></p>
+<p><a href="{% url 'profiles:index' %}">Home</a></p>
 {% if profiles %}
   <ul>
     {% for profile in profiles %}
-      <li><a href="{% url 'detail' profile.id %}/">{{ profile.full_name }}</a></li>
+      <li><a href="{% url 'profiles:detail' profile.id %}">{{ profile.full_name }}</a></li>
     {% endfor %}
   </ul>
 {% else %}
