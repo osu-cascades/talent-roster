@@ -9,8 +9,14 @@
 <body>
   <h1>Profiles</h1>
   
-  {% for profile in output %}
-{{ first_name }}
-{% endfor %}
+  {%if all_profiles %}
+    <ul>
+    {% for profile in all_profiles %}
+        <li>{{profile.first_name}}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
 </body>
 </html>

@@ -21,8 +21,9 @@ def business(request):
     return render(request, 'profiles/business.html')
 
 def profiles(request):
-
-    all_profiles = Profile.objects.all()
-    context = {'first_name': all_profiles}
+    all_profiles = Profile.objects.order_by('-first_name')
+    context = {'all_profiles': all_profiles}
+    print(context)
+    print(context)
 
     return render(request, 'profiles/profiles.html',context)
