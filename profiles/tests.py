@@ -32,6 +32,15 @@ class ProfileViewTests(TestCase):
         self.assertContains(response, "Fake Student")
 
 
+class ProfileModelTests(TestCase):
+
+    def test_has_full_name(self):
+        self.fail("TODO @rkojan")
+        # Create a profile object using create_profile()
+        # Assert that the profile objects full_name is equal to "Fake Student"
+
+
+# Test helpers
 
 def create_profile():
      return Profile.objects.create(
