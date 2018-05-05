@@ -6,6 +6,6 @@ app_name = 'profiles'
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('list/', views.list, name='list'),
-    path('<int:profile_id>/', views.detail, name='detail'),
+    path('list/', views.ListView.as_view(), name='list'),
+    path('<int:pk>/', views.DetailView.as_view(), name='detail'),
 ]

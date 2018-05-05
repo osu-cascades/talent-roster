@@ -1,15 +1,21 @@
 from django.http import HttpResponse, Http404
 from django.shortcuts import render, get_object_or_404
+from django.views import generic
 from .models import Profile
 
 
 def index(request):
     return render(request, 'profiles/index.html')
 
-def list(request):
-    profiles = Profile.objects.order_by('last_name')
-    return render(request, 'profiles/list.html', {'profiles': profiles})
 
-def detail(request, profile_id):
-    profile = get_object_or_404(Profile, pk=profile_id)
-    return render(request, 'profiles/detail.html', {'profile': profile})
+class ListView(generic.ListView):
+    template_name = 'profiles/list.html'
+    context_object_name = 'profiles'
+
+    def get_queryset(self):
+        return Profile.objects.order_by('last_name')
+
+
+class DetailView(generic.DetailView):
+    model = Profile
+    template_name = 'profiles/detail.html'
