@@ -9,8 +9,6 @@ def index(request):
 
 
 class ListView(generic.ListView):
-    template_name = 'profiles/list.html'
-    context_object_name = 'profiles'
 
     def get_queryset(self):
         return Profile.objects.order_by('last_name')
@@ -18,4 +16,4 @@ class ListView(generic.ListView):
 
 class DetailView(generic.DetailView):
     model = Profile
-    template_name = 'profiles/detail.html'
+
