@@ -11,19 +11,18 @@ def profile(request):
 def sign_up(request):
     return render(request, 'signup.html')
 
-def log_in(reguest):
-    return render(reguest, 'login.html')
+def log_in(request):
+    return render(request, 'login.html')
 
-def account(reguest):
-    return render(reguest, 'account.html')
+def account(request):
+    return render(request, 'account.html')
 
-def business(reguest):
-    return render(reguest, 'business.html')
+def business(request):
+    return render(request, 'business.html')
 
-def profiles(reguest):
+def profiles(request):
 
     all_profiles = Profile.objects.all()
-    output = ', '.join([r.first_name for r in all_profiles])
-    print(output)
+    context = {'first_name': all_profiles}
 
-    return render(reguest, 'profiles.html')
+    return render(request, 'profiles.html',context)
