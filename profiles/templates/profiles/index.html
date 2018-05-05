@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>OSU Cascades Computer Science Talent Roster</h1>
-<p><a href="/admin">Sign In</a></p>
+<p><a href="{% url 'admin:login' %}">Sign In</a></p>
 <h2>Featured Profile</h2>
 <div class="profile" id="featured_profile">
   <img src="/static/sample_profile.png">
@@ -17,7 +17,7 @@
 <div class="main_page">
   <div class="students_main">
     <span class="fa fa-graduation-cap" style="font-size:100px;"></span>
-    <a href="/admin"><button class='main_button'>Register</button></a>
+    <a href="{% url 'admin:login' %}"><button class='main_button'>Register</button></a>
   </div>
   <div class="business_main">
     <span class="fab fa-black-tie" style="font-size:100px;"></span>
