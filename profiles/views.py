@@ -22,4 +22,5 @@ def business(reguest):
     return render(reguest, 'business.html')
 
 def profiles(reguest):
+    allProfiles = .models.profiles
     return render(reguest, 'profiles.html')
