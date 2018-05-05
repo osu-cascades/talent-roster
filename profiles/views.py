@@ -8,10 +8,7 @@ def index(request):
 
 def list(request):
     profiles = Profile.objects.order_by('last_name')
-    context = {
-        'profiles': profiles
-    }
-    return render(request, 'profiles/list.html', context)
+    return render(request, 'profiles/list.html', {'profiles': profiles})
 
 def detail(request, profile_id):
     profile = get_object_or_404(Profile, pk=profile_id)
