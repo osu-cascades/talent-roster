@@ -1,5 +1,5 @@
+from django.http import HttpResponse, Http404
 from django.shortcuts import render
-from django.http import HttpResponse
 from .models import Profile
 
 
@@ -14,4 +14,8 @@ def list(request):
     return render(request, 'profiles/list.html', context)
 
 def detail(request, profile_id):
-    return HttpResponse("Display profile %s" % profile_id)
+    try:
+        profile = Profile.objects.get(pk=profile_id)
+    except Profile.DoesNotExist:
+        raise Http404("Profile does not exist")
+    return render(request, 'profiles/detail.html', {'profile': profile})
