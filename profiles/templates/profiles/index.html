@@ -1,9 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <title>OSU Cascades Computer Science Talent Roster</title>
-  <link rel="stylesheet" href="/static/profiles/main.css">
+  <link rel="stylesheet" href="{% static 'profiles/main.css' %}">
   <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -11,7 +12,7 @@
 <p><a href="{% url 'admin:login' %}">Sign In</a></p>
 <h2>Featured Profile</h2>
 <div class="profile" id="featured_profile">
-  <img src="/static/profiles/sample_profile.png">
+  <img src="{% static 'profiles/sample_profile.png' %}">
   <p><a href="{% url 'profiles:list' %}">View all profiles</a></p>
 </div>
 <div class="main_page">
