@@ -28,24 +28,3 @@ class DetailView(generic.DetailView):
 # log_in ->  handled by Django admin automatically
 # account -> handled by Django admin automatically
 # profiles -> handled by ListView above.
-
-
-def profile(request):
-    return render(request, 'profiles/profile.html', output)
-
-def sign_up(request):
-    return render(request, 'profiles/signup.html')
-
-def log_in(request):
-    return render(request, 'profiles/login.html')
-
-def account(request):
-    return render(request, 'profiles/account.html')
-
-def profiles(request):
-    all_profiles = Profile.objects.order_by('-first_name')
-    context = {'all_profiles': all_profiles}
-    print(context)
-    print(context)
-
-    return render(request, 'profiles/profiles.html',context)
