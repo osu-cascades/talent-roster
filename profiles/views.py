@@ -19,12 +19,3 @@ class ListView(generic.ListView):
 
 class DetailView(generic.DetailView):
     model = Profile
-
-
-
-# Delete these once you see that we do not need them.
-# profile -> handled by DetailView above.
-# sign_up -> handled by Django admin automatically
-# log_in ->  handled by Django admin automatically
-# account -> handled by Django admin automatically
-# profiles -> handled by ListView above.
