@@ -44,15 +44,25 @@ Create your Django superuser record:
 
 `./manage.py createsuperuser`
 
-TODO any remaining setup config
-
 Start the server:
 
 `./manage.py runserver`
 
 ## Testing
 
-TODO
+This application uses the default Django test client and python unittest via the
+[green](https://github.com/CleanCut/green) test runner for color output. Ensure
+that all static assets have been "collected":
+
+`./manage.py collectstatic`
+
+And then run the test suite:
+
+`./manage.py test profiles`
+
+You shouldn't run the `collectsatic` command every time. But if you see an error
+like _Missing staticfiles manifest entry for X_, then run the `collectstatic`
+command.
 
 ## Deployment
 
