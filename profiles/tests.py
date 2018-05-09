@@ -37,7 +37,7 @@ class ProfileModelTests(TestCase):
     def test_has_full_name(self):
         self.fail("TODO @rkojan")
         # Create a profile object using create_profile()
-        # Assert that the profile objects full_name is equal to "Fake Student"
+        # Assert that the profile object's full_name is equal to "Fake Student"
 
 
 # Test helpers
