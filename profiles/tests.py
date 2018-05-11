@@ -27,7 +27,7 @@ class ProfileViewTests(TestCase):
 
     def test_detail_renders_student_profile(self):
         profile = create_profile()
-        response = self.client.get(reverse('profiles:detail', args=(1,)))
+        response = self.client.get(reverse('profiles:detail', args=(profile.id,)))
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, "Fake Student")
 
