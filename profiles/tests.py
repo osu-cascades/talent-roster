@@ -38,6 +38,10 @@ class ProfileModelTests(TestCase):
         profile = create_profile()
         self.assertEqual(profile.full_name(), "Fake Student")
 
+    def test_string_representation_is_full_name(self):
+        profile = create_profile()
+        self.assertEqual(profile.__str__(), "Fake Student")
+
 def create_profile():
      return Profile.objects.create(
         first_name="Fake",
