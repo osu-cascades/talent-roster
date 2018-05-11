@@ -76,7 +76,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'profiles/static'),
 )
 
-# TEST_RUNNER="green.djangorunner.DjangoRunner"
+TEST_RUNNER="green.djangorunner.DjangoRunner"
 
 django_heroku.settings(locals())
 

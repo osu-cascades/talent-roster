@@ -36,7 +36,7 @@ class ProfileModelTests(TestCase):
 
     def test_has_full_name(self):
         profile = create_profile()
-        self.assertEqual(profile.first_name.full_name(),"Fake Student")
+        self.assertEqual(profile.full_name(), "Fake Student")
 
 def create_profile():
      return Profile.objects.create(
