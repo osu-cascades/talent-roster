@@ -35,23 +35,19 @@ class ProfileViewTests(TestCase):
 class ProfileModelTests(TestCase):
 
     def test_has_full_name(self):
-        self.fail("TODO @rkojan")
-        # Create a profile object using create_profile()
-        # Assert that the profile object's full_name is equal to "Fake Student"
-
-
-# Test helpers
+        profile = create_profile()
+        self.assertEqual(profile.first_name.full_name(),"Fake Student")
 
 def create_profile():
      return Profile.objects.create(
-         first_name="Fake",
-         last_name="Student",
-         email="fake@example.com",
-         github_username="fake",
-         bio="Fake bio",
-         graduation_date=timezone.now(),
-         photo="fake",
-         resume="fake",
-         skills="fake",
-         website_url="fake"
-     )
+        first_name="Fake",
+        last_name="Student",
+        email="fake@example.com",
+        github_username="fake",
+        bio="Fake bio",
+        graduation_date=timezone.now(),
+        photo="fake",
+        resume="fake",
+        skills="fake",
+        website_url="fake"
+    )
