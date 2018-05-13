@@ -11,6 +11,7 @@ env:
   global:
     - DJANGO=2.0.5
     - DJANGO_DEBUG=False
+    - DJANGO_ENV=production
 
 # before_install:
 
