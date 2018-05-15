@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>OSU Cascades Computer Science Talent Roster</title>
-  
-</head>
+{% extends 'profiles/base.html' %}
+{% load static %}
 
-<body>
+{% block content %}
   <h1>Profiles</h1>
   
   {%if all_profiles %}
@@ -18,5 +13,5 @@
 {% else %}
     <p>No polls are available.</p>
 {% endif %}
-</body>
-</html>
+
+{% endblock %}

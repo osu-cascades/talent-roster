@@ -4,7 +4,7 @@ import django_heroku
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'This will be overwritten in production with a real secret.'
-DEBUG = (os.environ['DJANGO_DEBUG'] == 'True')
+# DEBUG = (os.environ['DJANGO_DEBUG'] == 'True')
 ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [

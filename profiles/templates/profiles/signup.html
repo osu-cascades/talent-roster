@@ -1,7 +1,7 @@
-<html>
-    <head>
-    </head>
-    <body>
+{% extends 'profiles/base.html' %}
+{% load static %}
+
+{% block content %}
         <h1>OSU Cascades Computer Science Program</h1>
         <h2>Signup</h2>
         
@@ -12,5 +12,4 @@
             Password <input type="password" name="password"><br>
             <input type="submit" name="Submit">
         </form>
-    </body>
-</html>
+{% endblock %}
