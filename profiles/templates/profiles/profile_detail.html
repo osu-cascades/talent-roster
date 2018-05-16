@@ -3,8 +3,16 @@
 
 {% block content %}
 
-
-<h1>{{ profile.full_name }}</h1>
-<p><a href="{% url 'profiles:list' %}">List of all profiles</a></p>
+<div class="container">
+  <h1>{{ profile.full_name }}</h1>
+  <p>{{ profile.bio}}</p>
+  <p>TODO email contact link</p>
+  <p>https://github.com/{{ profile.github_username }}</p>
+  <p>Graduating on {{ profile.graduation_date }}</p>
+  <p><img src="{{ profile.photo }}" width="200" height="300" /></p>
+  <p><a href="{{ profile.resume }}">resume</a></p>
+  <p>{{ profile.skills }}</p>
+  <p><a href="{{ profile.website_url }}">website</a></p>
+</div>
 
 {% endblock %}
