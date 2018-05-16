@@ -9,9 +9,6 @@ def index(request):
 def business(request):
     return render(request, 'profiles/business.html')
 
-def login(request):
-    return render(request, 'profiles/login.html')
-
 class ListView(generic.ListView):
     def get_queryset(self):
         return Profile.objects.order_by('last_name')
