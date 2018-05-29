@@ -15,9 +15,7 @@ class SkillInline(admin.StackedInline):
 
 class ProfileAdmin(admin.ModelAdmin):
     form = ProfileForm
-    fieldsets = [
-        (None, {'fields': [('first_name','last_name'), ('email_address', 'graduation_date'), 'bio', ('photo', 'resume'), 'github_username','website_url']}),
-    ]
+    fields = [('first_name','last_name'), ('email_address', 'graduation_date'), 'bio', ('photo', 'resume'), 'github_username','website_url']
     list_display = ('last_name', 'first_name', 'email_address', 'graduation_date')
     list_filter =['graduation_date']
     inlines = [SkillInline]
