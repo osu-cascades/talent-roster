@@ -7,12 +7,7 @@ class ProfileForm(forms.ModelForm):
     bio = forms.CharField(widget = forms.Textarea(attrs={'rows': 5, 'cols': 100}), help_text='500 character maximum')
 
 
-class SkillForm(forms.ModelForm):
-    level = forms.IntegerField(max_value = 5, min_value = 1, widget = forms.Select(choices=(('', 'Choose...'), ('1', '1 (exposed)'), ('2', '2'), ('3', '3'), ('4', '4'), ('5', '5 (expert)'))))
-
-
 class SkillInline(admin.StackedInline):
-    form = SkillForm
     model = Skill
     extra = 5
 

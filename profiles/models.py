@@ -19,4 +19,6 @@ class Profile(models.Model):
 class Skill(models.Model):
     profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
     name = models.CharField(max_length=20, blank=False)
-    level = models.PositiveIntegerField(blank=False)
+    CHOICES = [(None, 'Choose...'), ('1', '1 (exposed)'), ('2', '2'), ('3', '3'), ('4', '4'), ('5', '5 (expert)')]
+    level = models.PositiveIntegerField(blank=False, choices=CHOICES)
+
