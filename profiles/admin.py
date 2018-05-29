@@ -10,6 +10,7 @@ class ProfileForm(forms.ModelForm):
 class SkillInline(admin.StackedInline):
     model = Skill
     extra = 5
+    max_num = 5
 
 
 class ProfileAdmin(admin.ModelAdmin):
