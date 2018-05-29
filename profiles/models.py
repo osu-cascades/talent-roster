@@ -15,6 +15,9 @@ class Profile(models.Model):
     def full_name(self):
         return  "%s %s" % (self.first_name, self.last_name)
 
+    def __str__(self):
+        return self.full_name()
+
 
 class Skill(models.Model):
     profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
