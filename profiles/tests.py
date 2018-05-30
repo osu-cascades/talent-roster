@@ -46,12 +46,11 @@ def create_profile():
      return Profile.objects.create(
         first_name="Fake",
         last_name="Student",
-        email="fake@example.com",
-        github_username="fake",
-        bio="Fake bio",
+        email_address="fake@example.com",
         graduation_date=timezone.now(),
+        bio="Fake bio",
+        github_username="fake",
         photo="fake",
         resume="fake",
-        skills="fake",
         website_url="fake"
     )

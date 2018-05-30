@@ -76,6 +76,9 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'profiles/static'),
 )
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
 TEST_RUNNER="green.djangorunner.DjangoRunner"
 
 django_heroku.settings(locals())

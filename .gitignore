@@ -95,3 +95,4 @@ pip-selfcheck.json
 pyvenv.cfg
 
 staticfiles/
+media/

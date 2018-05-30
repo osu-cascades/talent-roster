@@ -11,6 +11,7 @@ django-heroku = "*"
 dj-database-url = "*"
 whitenoise = "*"
 django-dotenv = "*"
+pillow = "*"
 
 [dev-packages]
 green = "*"
