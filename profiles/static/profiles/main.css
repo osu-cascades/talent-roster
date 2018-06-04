@@ -1,10 +1,14 @@
 body {
   padding-top: 3.5rem;
 }
-
-.featured_profile_photo{
-  float:left;
+.featured_profile{
+  padding-top: 3%;
+  padding-bottom: 5%;
 }
-.featured_profile_name{
-  float:left;
+ul {
+  list-style: none;
+  padding-left: 0;
+}​
+.featured_profile{
+  background-color: red;
 }
