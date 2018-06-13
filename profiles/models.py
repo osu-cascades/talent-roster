@@ -1,7 +1,6 @@
 from django.db import models
 
 
-
 def profile_media_path(instance, filename):
     return 'profiles/owner_{0}/{1}'.format('TODO', filename)
 
