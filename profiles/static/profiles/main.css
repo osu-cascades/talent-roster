@@ -1,14 +1,12 @@
 body {
   padding-top: 3.5rem;
 }
-.featured_profile{
-  padding-top: 3%;
-  padding-bottom: 5%;
+
+.featured_profile {
+  padding-top: 2em;
 }
-ul {
+
+.featured_profile ul {
   list-style: none;
   padding-left: 0;
 }​
-.featured_profile{
-  background-color: red;
-}
