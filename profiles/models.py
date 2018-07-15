@@ -29,3 +29,5 @@ class Skill(models.Model):
     CHOICES = [(None, 'Choose...'), (1, '1 (exposed)'), (2, '2'), (3, '3'), (4, '4'), (5, '5 (expert)')]
     level = models.PositiveIntegerField(blank=False, choices=CHOICES)
 
+    def __str__(self):
+        return self.name()
